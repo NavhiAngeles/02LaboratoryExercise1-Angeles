@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.listCashierQueue = new System.Windows.Forms.ListBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnRefresh
@@ -67,6 +69,10 @@
             this.listCashierQueue.Size = new System.Drawing.Size(186, 277);
             this.listCashierQueue.TabIndex = 2;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // CashierWindowQueueForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -87,5 +93,6 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.ListBox listCashierQueue;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -57,14 +57,12 @@
             // 
             // lblQueue
             // 
-            this.lblQueue.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblQueue.AutoSize = true;
             this.lblQueue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQueue.Location = new System.Drawing.Point(4, 118);
+            this.lblQueue.Location = new System.Drawing.Point(157, 89);
             this.lblQueue.Name = "lblQueue";
-            this.lblQueue.Size = new System.Drawing.Size(421, 24);
+            this.lblQueue.Size = new System.Drawing.Size(131, 87);
             this.lblQueue.TabIndex = 2;
-            this.lblQueue.Text = "Your position number will be displayed here";
+            this.lblQueue.Text = "Your position number ";
             // 
             // QueuingForm
             // 

@@ -14,11 +14,15 @@ namespace _02LaboratoryExercise1
     public partial class QueuingForm : Form
     {
         CashierClass cashier;
+        CashierWindowQueueForm cashierWindowQueueForm;
         public QueuingForm()
         {
-            
+  
             InitializeComponent();
             cashier = new CashierClass();
+            cashierWindowQueueForm = new CashierWindowQueueForm();
+            cashierWindowQueueForm.Show();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,7 +31,7 @@ namespace _02LaboratoryExercise1
             CashierClass.getNumberInQueue = lblQueue.Text;
             CashierClass.CashierQueue.Enqueue(CashierClass.getNumberInQueue);
         }
-        private class CashierClass
+        public class CashierClass
         {
             private int x;
             public static string getNumberInQueue = "";

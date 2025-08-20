@@ -16,11 +16,12 @@ namespace _02LaboratoryExercise1
         public CashierWindowQueueForm()
         {
             InitializeComponent();
+            AutoRefresh();  
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            DisplayCashierQueue(CashierClass.CashierQueue);
+            DisplayCashierQueue(QueuingForm.CashierClass.CashierQueue);
 
         }
         public void DisplayCashierQueue(IEnumerable CashierList)
@@ -30,6 +31,19 @@ namespace _02LaboratoryExercise1
             {
                 listCashierQueue.Items.Add(obj.ToString());
             }
+        }
+        private void AutoRefresh()
+        {
+            Timer timer = new Timer();
+            timer.Interval = (1 * 1000); // 1 sec.
+            timer.Tick += new EventHandler(timer1_Tick); //timer1_tick represents the name of Tick Event
+            timer.Start();
+        }
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DisplayCashierQueue(QueuingForm.CashierClass.CashierQueue);
         }
     }
 }
