@@ -45,7 +45,7 @@ namespace _02LaboratoryExercise1
             {
                 x++;
                 CashierNumber = CashierNumber + x.ToString();
-                return CashierNumber;
+                return CashierNumber; 
             }
         }
     }

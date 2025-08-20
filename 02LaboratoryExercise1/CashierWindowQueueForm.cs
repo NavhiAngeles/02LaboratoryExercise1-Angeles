@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static _02LaboratoryExercise1.QueuingForm;
 
 namespace _02LaboratoryExercise1
 {
@@ -44,6 +45,11 @@ namespace _02LaboratoryExercise1
         private void timer1_Tick(object sender, EventArgs e)
         {
             DisplayCashierQueue(QueuingForm.CashierClass.CashierQueue);
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            CashierClass.CashierQueue.Dequeue();
         }
     }
 }

@@ -59,6 +59,7 @@
             this.btnNext.TabIndex = 1;
             this.btnNext.Text = "NEXT";
             this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // listCashierQueue
             // 
